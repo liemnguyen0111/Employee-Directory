@@ -51,11 +51,11 @@ useEffect(() =>
           case 'Name':
             if(sort.name === 'ASC')
             {
-              setItems(temp.sort((a, b) => (a.lName > b.fName) ? -1 : 1))
+              setItems(temp.sort((a, b) => (a.fName > b.fName) ? -1 : 1))
             }
             if(sort.name === 'DESC')
             {
-             setItems(temp.sort((a, b) => (a.fName > b.lName) ? 1 : -1))
+             setItems(temp.sort((a, b) => (a.fName > b.fName) ? 1 : -1))
             }
           break;
     }
