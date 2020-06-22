@@ -19,22 +19,50 @@ const [items , setItems ] = useState([])
 // useEffect for window resize
 useEffect(() =>
 {  
-  
+  const temp = []
   if(data)
   { 
-    console.log(sort) 
-    setItems(data.map(item => {
+   
+    
+   data.map(item => {
     return item.employees.map(employee => (
       
-       {
+      temp.push({
           id : employee._id,
           department : item.name, 
           fName : employee.fName,
           lName : employee.lName,
           title : employee.role.title,
-          salary : employee.role.salary }
+          salary : employee.role.salary })
           ))
-  }))
+  })
+  setItems(temp)
+  if(sort)
+  {
+    console.log(sort)
+    switch(sort.cat)
+    {
+          case 'Department' :
+            setItems(temp.filter(item => item.department === sort.name))
+          break;
+          case 'Role' :
+            setItems(temp.filter(item => item.title === sort.name))
+          break;
+          case 'Name':
+            if(sort.name === 'ASC')
+            {
+              setItems(temp.sort((a, b) => (a.lName > b.fName) ? -1 : 1))
+            }
+            if(sort.name === 'DESC')
+            {
+             setItems(temp.sort((a, b) => (a.fName > b.lName) ? 1 : -1))
+            }
+          break;
+    }
+
+  }
+ 
+  console.log(items)
 }
 
  window.addEventListener('resize', handleResize)
@@ -48,8 +76,11 @@ useEffect(() =>
     <div className="view" style={{maxHeight : windowHeight * .85 }}>
     {
      items?
-      items.map(item => 
-        item.map(each => <Card key={each.id} data={each} img={image}/>)
+      items.map(item =>     
+        <>
+        <Card key={item.id} data={item} img={image}/>
+        </>
+
         ): null
     }
 

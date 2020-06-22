@@ -14,7 +14,10 @@ const Department = (props) => {
   {
     event.preventDefault()
     axios.post('api/departments',{name : event.target.deptName.value})
-    console.log(event.target.deptName.value)
+    .then(()=> console.log('Ok'))
+    .catch(err => console.error(err))
+    
+    event.target.reset()
   }
   return (
     <div className="addItem">

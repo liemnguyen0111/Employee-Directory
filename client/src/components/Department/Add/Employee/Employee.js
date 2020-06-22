@@ -15,7 +15,7 @@ const Employee = (props) => {
       department : event.target.department.value})
       .then(({data}) => console.log(data))
       .catch(err => console.error(err))
-    // props.setCurrent('')
+      event.target.reset()
   }
 
   const cancel = () =>
