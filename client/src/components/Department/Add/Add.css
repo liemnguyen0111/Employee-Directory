@@ -1,0 +1,127 @@
+.wrapper
+{
+    position: absolute;
+    right: 1%;
+    top: 1%;
+}
+
+.add
+{
+    padding: 5px 30px 5px 30px;
+    background-color: rgba(43, 38, 48, 0.301);
+    border-radius: 10px;
+    color: rgb(232, 236, 238);
+    text-decoration: none;
+    animation: surprise 1s;
+}
+
+.add:hover
+{
+    cursor: pointer;
+    background-color: rgba(43, 38, 48, 0.61);
+    padding: 3px 30px 7px 30px;
+}
+
+
+.addItem
+{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    padding: 10px;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: rgb(8, 4, 65);
+    width: 80%;
+    height: 60%;
+    border-radius: 10px;
+    z-index: 10;
+    animation: changing 5s infinite linear;
+}
+
+.addItem h1
+{
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(6, 223, 17);
+    text-align: center;
+}
+
+.addItem form
+{
+    display: block;
+    text-align: center;
+    font-size: large;
+    margin-bottom: 50px;
+    margin-top: 10%;
+}
+
+.addItem input
+{
+
+  background-color: rgb(2, 2, 24);
+  color: rgb(6, 223, 6);
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.addItem label
+{
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(250, 248, 248);
+}
+
+.submit
+{   
+    display: block;
+    position: absolute;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    left:10%;
+    right:10%;
+    bottom: 10px;
+    text-align: center;
+    height: 10%;
+    width: 30%;
+    font-size: 30px;
+}
+
+.cancel
+{   
+    display: block;
+    position: absolute;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    top: 10px;
+    right: 10px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.addItem button
+{
+
+  background-color: rgb(255, 1, 1);
+  color: rgb(0, 3, 0);
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+
+@keyframes changing
+{
+    0%  {background-color: rgb(0, 22, 150);}
+    25%  {background-color: rgb(1, 70, 66);}
+    50%  {background-color: rgb(0, 22, 150);}
+    75%  {background-color: rgb(1, 70, 66);}
+    100%   {background-color: rgb(0, 22, 150);}
+}
+
+@media only screen and (max-width: 600px) 
+{
+    .wrapper
+    {
+       display: none;
+    }
+  }

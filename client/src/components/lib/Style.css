@@ -1,0 +1,76 @@
+.start 
+{
+    position: absolute;
+    padding: 5px 30px 5px 30px;
+    top: 40%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: rgba(43, 38, 48, 0.301);
+    border-radius: 10px;
+    color: rgb(232, 236, 238);
+    font-size: 50px;
+    text-decoration: none;
+    animation: surprise 1s;
+}
+
+.start:hover
+{
+    background-color: rgba(43, 38, 48, 0.61);
+    padding: 3px 30px 7px 30px;
+}
+
+
+@keyframes surprise {
+    0%  {top: -100%;}
+    100%  {top: 40%;}
+    /* 40%  {left: 46%;}
+    50%  {left: 54%;}
+    60%  {left: 48%;}
+    80%  {left: 52%;}    
+    100%  {left: 50%;} */
+  }
+
+.menu
+{
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px 30px 5px 30px;
+    background-color: rgba(43, 38, 48, 0.301);
+    border-radius: 10px;
+    color: rgb(232, 236, 238);
+    font-size: 50px;
+    text-decoration: none;
+    animation: renderIt 1s;
+}
+
+.list
+{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0);
+    animation: surprise 1s;
+
+}
+
+.menu:hover
+{
+    background-color: rgba(43, 38, 48, 0.61);
+    padding: 3px 30px 7px 30px;
+    /* animation: mymove 1s infinite; */
+}
+
+
+@keyframes renderIt {
+    0% {padding: 0px 0px 0px 0px;}
+    100%  {padding: 5px 30px 5px 30px;}
+  }
+
+
+a:hover
+{
+    cursor: pointer;
+}

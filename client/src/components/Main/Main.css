@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    background-color: black;
+}
+
+.hero-image
+{
+    background-image: url("./background.jpg");
+    background-color:black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin: auto;
+    animation: move 1s infinite linear;
+}
+
+@keyframes move {
+    0% {width: 100%; }
+    50% {width: 99.5% }
+    100% {width: 100%; }
+  }
