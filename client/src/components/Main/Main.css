@@ -16,6 +16,6 @@
 
 @keyframes move {
     0% {width: 100%; }
-    50% {width: 99.5% }
+    50% {width: 99% }
     100% {width: 100%; }
   }
